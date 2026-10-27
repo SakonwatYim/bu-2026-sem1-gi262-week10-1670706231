@@ -30,7 +30,7 @@ namespace MidtermExam.Prob02
         public void Open(string url)
         {
             // TODO: เขียนคำตอบแทนคำสั่ง throw exception ด้านล่าง
-            throw new NotImplementedException();
+            
         }
 
         /// <summary>ย้อนกลับไปยังหน้าล่าสุดในประวัติย้อนกลับหนึ่งขั้น</summary>
@@ -41,6 +41,12 @@ namespace MidtermExam.Prob02
         public void Back()
         {
             // TODO: เขียนคำตอบแทนคำสั่ง throw exception ด้านล่าง
+            if (backHistory.Count == 0 )
+            {
+                return; 
+            }
+            var backHis = backHistory.Pop();
+            Open(backHis);
             throw new NotImplementedException();
         }
 
@@ -52,7 +58,7 @@ namespace MidtermExam.Prob02
         public void Forward()
         {
             // TODO: เขียนคำตอบแทนคำสั่ง throw exception ด้านล่าง
-            throw new NotImplementedException();
+            
         }
 
         /// <summary>อ่าน URL ของหน้าปัจจุบัน โดยไม่เปลี่ยนหน้าหรือประวัติใด ๆ</summary>
